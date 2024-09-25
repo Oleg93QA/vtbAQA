@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <ThresholdFilter level="INFO" onMatch="NORMAL" onMismatch="DENY"/>
+            <PatternLayout
+                    pattern="%d{DATE}: %highlight{%5p}{FATAL=bright blue, ERROR=bright red, WARN=red, INFO=bright black} %20.20C#%4L: %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="console"/>
+        </Root>
+    </Loggers>
+</Configuration>
